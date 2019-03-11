@@ -3,7 +3,7 @@ package com.safier.androidcollection.util;
 import android.content.Context;
 import android.content.Intent;
 
-import com.safier.androidcollection.HomeActivity;
+import com.safier.androidcollection.activity.HomeActivity;
 
 /**
  * @author safier

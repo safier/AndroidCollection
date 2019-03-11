@@ -1,8 +1,10 @@
-package com.safier.androidcollection;
+package com.safier.androidcollection.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.safier.androidcollection.R;
 
 public class HomeActivity extends AppCompatActivity {
 
