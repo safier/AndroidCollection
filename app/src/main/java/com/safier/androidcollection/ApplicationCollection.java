@@ -10,9 +10,20 @@ import android.support.multidex.MultiDex;
  */
 public class ApplicationCollection extends Application {
 
+    private static Application instance;
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         MultiDex.install(this);
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        instance = this;
+    }
+
+    public static Application getInstance() {
+        return instance;
     }
 }
