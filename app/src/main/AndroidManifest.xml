@@ -22,6 +22,8 @@
         <activity
             android:name=".activity.HomeActivity"
             android:screenOrientation="portrait" />
+        <!--EditText相关页面-->
+        <activity android:name=".activity.EditTextActivity" />
     </application>
 
 </manifest>

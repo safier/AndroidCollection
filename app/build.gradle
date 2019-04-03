@@ -3,7 +3,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.safier.androidcollection"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -45,5 +45,10 @@ dependencies {
 
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
 
+    //基础工具库
+    implementation "com.github.vondear.RxTool:RxKit:v2.2.7"
+
+    //UI库
+    implementation "com.github.vondear.RxTool:RxUI:v2.2.7"
 
 }

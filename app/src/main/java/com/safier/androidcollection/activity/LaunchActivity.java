@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import com.safier.androidcollection.R;
 import com.safier.androidcollection.util.AnimationUtil;
 import com.safier.androidcollection.util.JumpUtil;
+import com.vondear.rxui.activity.ActivityBase;
 
 import java.lang.ref.WeakReference;
 
@@ -19,7 +20,7 @@ import java.lang.ref.WeakReference;
  * @author safier
  * @date 2019/3/8
  */
-public class LaunchActivity extends AppCompatActivity {
+public class LaunchActivity extends ActivityBase {
 
     private ImageView mIvLaunch;
     public static final int DURATION = 4000;

@@ -10,11 +10,12 @@ import com.safier.androidcollection.adapter.HomeAdapter;
 import com.safier.androidcollection.adapter.itemdecoration.HomeRecyclerViewItemDecoration;
 import com.safier.androidcollection.bean.HomeItemBean;
 import com.safier.androidcollection.util.ImageUtil;
+import com.vondear.rxui.activity.ActivityBase;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends ActivityBase {
 
     private RecyclerView recyclerview;
     private List<HomeItemBean> mDatas;
@@ -30,7 +31,7 @@ public class HomeActivity extends AppCompatActivity {
 
     private void initData() {
         mDatas = new ArrayList<>();
-        mDatas.add(new HomeItemBean("时崎狂三",R.drawable.tokisaki_kurumi,HomeActivity.class));
+        mDatas.add(new HomeItemBean("EditText",R.drawable.tokisaki_kurumi,EditTextActivity.class));
         mDatas.add(new HomeItemBean("蕾姆",R.drawable.rem,HomeActivity.class));
         mDatas.add(new HomeItemBean("艾米莉亚",R.drawable.emilia,HomeActivity.class));
         mDatas.add(new HomeItemBean("康娜",R.drawable.kanna_kamui,HomeActivity.class));

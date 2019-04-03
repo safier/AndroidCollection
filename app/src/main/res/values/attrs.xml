@@ -6,4 +6,18 @@
         <attr name="civ_border_overlay" format="boolean" />
         <attr name="civ_circle_background_color" format="color" />
     </declare-styleable>
+    <declare-styleable name="PasswordView">
+        <attr name="mode">
+            <enum name="UNDERLINE" value="0"/>
+            <enum name="RECT" value="1"/>
+        </attr>
+        <attr name="passwordLength" format="integer"/>
+        <attr name="cursorFlashTime" format="integer"/>
+        <attr name="borderWidth" format="dimension"/>
+        <attr name="borderColor" format="color"/>
+        <attr name="cursorColor" format="color"/>
+        <attr name="isCursorEnable" format="boolean"/>
+        <attr name="passwordPadding" format="dimension"/>
+        <attr name="cipherEnable" format="boolean"/>
+    </declare-styleable>
 </resources>
