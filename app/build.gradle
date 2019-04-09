@@ -51,4 +51,6 @@ dependencies {
     //UI库
     implementation "com.github.vondear.RxTool:RxUI:v2.2.7"
 
+    implementation 'com.nineoldandroids:library:2.4.0'
+
 }

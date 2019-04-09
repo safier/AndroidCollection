@@ -9,6 +9,7 @@ import android.util.Log;
 
 import com.safier.androidcollection.R;
 import com.safier.androidcollection.fragment.edittext.EditTextOneFragment;
+import com.safier.androidcollection.fragment.edittext.EditTextTwoFragment;
 import com.vondear.rxui.activity.ActivityBase;
 
 import java.util.ArrayList;
@@ -31,7 +32,9 @@ public class EditTextActivity extends ActivityBase {
         setContentView(R.layout.activity_edittext);
         viewpage = (ViewPager)findViewById(R.id.viewpage);
         EditTextOneFragment editTextOneFragment = new EditTextOneFragment();
+        EditTextTwoFragment editTextTwoFragment = new EditTextTwoFragment();
         mFragments.add(editTextOneFragment);
+        mFragments.add(editTextTwoFragment);
         editTextAdapter = new EditTextAdapter(getSupportFragmentManager());
         if (viewpage == null) {
             Log.e(TAG," viewpage == null");

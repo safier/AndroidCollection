@@ -5,4 +5,6 @@
     <color name="colorAccent">#FF4081</color>
     <color name="white">#FFFFFFFF</color><!-- 全白 -->
     <color name="black">#FF000000</color><!-- 全黑 -->
+    <color name="blue_00BCD4">#00BCD4</color>
+    <color name="pink_E9A5C5">#E9A5C5</color>
 </resources>
