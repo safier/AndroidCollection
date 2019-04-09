@@ -1,8 +1,9 @@
-package com.safier.androidcollection.fragment;
+package com.safier.androidcollection.fragment.edittext;
 
 import android.support.v4.app.Fragment;
 
 import com.safier.androidcollection.R;
+import com.safier.androidcollection.fragment.BaseFragment;
 
 /**
  * @author safier
