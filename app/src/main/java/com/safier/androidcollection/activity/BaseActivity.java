@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 
 import com.safier.androidcollection.R;
+import com.safier.androidcollection.view.SlideViewPager;
 import com.vondear.rxui.activity.ActivityBase;
 
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ import java.util.ArrayList;
 public abstract class BaseActivity extends ActivityBase {
 
     public  final String TAG = this.getClass().getSimpleName();
-    public ViewPager viewpage;
+    public SlideViewPager viewpage;
     public ArrayList<Fragment> mFragments = new ArrayList<>();
     public MyAdapter myAdapter;
 
@@ -26,7 +27,7 @@ public abstract class BaseActivity extends ActivityBase {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base);
-        viewpage = (ViewPager)findViewById(R.id.viewpage);
+        viewpage = (SlideViewPager)findViewById(R.id.viewpage);
         initFragments();
         if (mFragments != null && mFragments.size() > 0) {
             myAdapter = new MyAdapter(getSupportFragmentManager());

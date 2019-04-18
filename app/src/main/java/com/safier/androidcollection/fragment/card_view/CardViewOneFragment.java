@@ -1,7 +1,9 @@
 package com.safier.androidcollection.fragment.card_view;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -11,6 +13,7 @@ import android.widget.Toast;
 import com.mxn.soul.slidingcard_core.ContainerView;
 import com.mxn.soul.slidingcard_core.SlidingCard;
 import com.safier.androidcollection.R;
+import com.safier.androidcollection.activity.CardViewActivity;
 import com.safier.androidcollection.bean.PhotoContent;
 import com.safier.androidcollection.fragment.BaseFragment;
 
@@ -31,6 +34,12 @@ public class CardViewOneFragment extends BaseFragment implements ContainerView.C
     ContainerView mContentview;
     private List<PhotoContent> dataList ;
     Unbinder unbinder;
+    private CardViewActivity.MyTouchListener myTouchListener = new CardViewActivity.MyTouchListener() {
+        @Override
+        public boolean onTouchEvent(MotionEvent event) {
+            return !isRangeOfView(mContentview,event);
+        }
+    };
 
     @Override
     protected void initView()  {
@@ -69,9 +78,22 @@ public class CardViewOneFragment extends BaseFragment implements ContainerView.C
     }
 
     @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        ((CardViewActivity)getActivity()).registerMyTouchListener(myTouchListener);
+    }
+
+
+    @Override
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        ((CardViewActivity)getActivity()).unRegisterMyTouchListener(myTouchListener);
     }
 
     @Override
@@ -112,5 +134,16 @@ public class CardViewOneFragment extends BaseFragment implements ContainerView.C
             e.printStackTrace();
         }
         return r_id;
+    }
+
+    public boolean isRangeOfView(View view,MotionEvent ev) {
+        int[] location = new int[2];
+        view.getLocationOnScreen(location);
+        int x = location[0];
+        int y = location[1];
+        if (ev.getX() < x || ev.getX() > (x + view.getWidth()) || ev.getY() < y || ev.getY() > (y + view.getHeight())){
+            return false;
+        }
+        return true;
     }
 }
