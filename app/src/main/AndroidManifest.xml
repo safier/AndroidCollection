@@ -24,6 +24,8 @@
             android:screenOrientation="portrait" />
         <!--EditText相关页面-->
         <activity android:name=".activity.EditTextActivity" />
+        <!--卡片滑动相关页面-->
+        <activity android:name=".activity.CardViewActivity" />
     </application>
 
 </manifest>

@@ -32,7 +32,7 @@ public class HomeActivity extends ActivityBase {
     private void initData() {
         mDatas = new ArrayList<>();
         mDatas.add(new HomeItemBean("EditText",R.drawable.tokisaki_kurumi,EditTextActivity.class));
-        mDatas.add(new HomeItemBean("蕾姆",R.drawable.rem,HomeActivity.class));
+        mDatas.add(new HomeItemBean("蕾姆",R.drawable.rem,CardViewActivity.class));
         mDatas.add(new HomeItemBean("艾米莉亚",R.drawable.emilia,HomeActivity.class));
         mDatas.add(new HomeItemBean("康娜",R.drawable.kanna_kamui,HomeActivity.class));
         mDatas.add(new HomeItemBean("薇尔莉特",R.drawable.violet_evergarden,HomeActivity.class));
